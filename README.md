@@ -1,1 +1,5 @@
-Hello there. I'm Andrey Petrov, a freelance software consultant. My main speciality is web application development.
+#### Howdy!
+
+#### I'm Andrey Petrov. I run a software company named DEADLINE.
+
+Check my [Twitter](https://twitter.com/andreythegeek) for updates.
