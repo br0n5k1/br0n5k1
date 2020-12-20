@@ -5,5 +5,5 @@
 </p>
 
 <p align="center">
-  Photo by <a href="https://unsplash.com/@5tep5">Alexander Popov</a>
+  By <a href="https://unsplash.com/@5tep5">Alexander Popov</a>
 </p>
