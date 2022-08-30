@@ -1,4 +1,4 @@
-DO EPIC SHIT
+I SHOULD GO
 
 <p align="center">
   <img alt="rave" src="https://raw.githubusercontent.com/andreythegeek/andreythegeek/dev/images/rave.jpg" />
