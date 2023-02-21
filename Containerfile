@@ -1,11 +1,12 @@
-FROM fedora:latest
+FROM registry.fedoraproject.org/fedora:latest
 
 ARG USER
 
-COPY opt/devenv /opt/devenv
-COPY etc/opt/devenv /etc/opt/devenv
+COPY opt/ide /opt/ide
+COPY etc/opt/ide /etc/opt/ide
 COPY etc/skel /etc/skel
 
-RUN sh -x /opt/devenv/setup.sh ${USER}
+RUN sh -x /opt/ide/setup.sh ${USER}
+RUN su --login ${USER} --command "fish /opt/ide/home.fish"
 
-CMD sh -x /etc/opt/devenv/start.sh
+CMD sh -x /etc/opt/ide/start.sh

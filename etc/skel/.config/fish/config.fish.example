@@ -1,0 +1,12 @@
+set fish_greeting
+
+set -gx EDITOR hx
+set -gx KERL_BUILD_BACKEND git
+set -gx KERL_CONFIGURE_OPTIONS "--disable-debug"
+set -gx ERL_AFLAGS "+pc unicode -kernel shell_history enabled"
+
+fish_add_path ~/.cache/rebar3/bin
+
+starship init fish | source
+
+source ~/.asdf/asdf.fish

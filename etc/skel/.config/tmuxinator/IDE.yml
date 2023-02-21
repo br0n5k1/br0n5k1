@@ -1,0 +1,15 @@
+name: IDE
+windows:
+  - Run:
+  - Changes:
+  - Code:
+  - Proxy:
+tmux_options: -f ~/.tmux.conf
+pre_window: clear
+startup_window: Run
+root: /project
+on_project_start: sh /opt/ide/detect/start.sh
+on_project_first_start: sh /opt/ide/detect/first.sh
+on_project_restart: sh /opt/ide/detect/restart.sh
+on_project_exit: sh /opt/ide/detect/exit.sh
+on_project_stop: sh /opt/ide/detect/stop.sh
