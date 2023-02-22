@@ -1,4 +1,4 @@
 ide:
 	podman build --tag=fuckadey/ide:latest \
-		--build-arg=USER=anonymous \
+		--build-arg=NICK=anonymous \
 		--file=Containerfile .
