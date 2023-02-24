@@ -44,6 +44,9 @@ curl --silent --show-error https://snapshots.mitmproxy.org/9.0.1/mitmproxy-9.0.1
 tar xf /tmp/mitmproxy.tar.gz --directory ~/.local/bin
 rm /tmp/mitmproxy.tar.gz
 
+# Set up Emacs dependencies:
+emacs --batch --load ~/.emacs --eval "(kill-emacs)"
+
 # Replace default configuration:
 mv ~/.config/fish/config.fish.example ~/.config/fish/config.fish
 

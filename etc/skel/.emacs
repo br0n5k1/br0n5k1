@@ -23,6 +23,8 @@
 (setq completion-auto-select 'second-tab)
 (setq completions-max-height 10)
 
+(setq-default mode-line-format nil)
+
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -86,8 +88,15 @@
 
 (use-package magit
   :ensure t
-  :bind ("C-c C-s" . magit-status))
+  :bind ("C-c C-s" . magit-status)
+  :init
+  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
 
 (use-package magit-delta
   :ensure t
   :hook (magit-mode . magit-delta-mode))
+
+(magit-status
+ (unless (file-directory-p
+          (expand-file-name ".git"))
+   (read-directory-name "Git repository: ")))

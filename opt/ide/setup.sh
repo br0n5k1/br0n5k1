@@ -2,13 +2,9 @@ echo "install_weak_deps=False" >> /etc/dnf/dnf.conf
 
 dnf upgrade --assumeyes --quiet
 dnf install --assumeyes --quiet --best @c-development @development-tools \
-                                       @development-tools \
-                                       @container-management \
-                                       buildah curl erlang emacs-nox fish \
-                                       fop httpie java-latest-openjdk-devel \
-                                       ncurses-devel openssl-devel passwd \
-                                       ruby rubygems tmux unixODBC-devel \
-                                       util-linux which xsltproc
+    @container-management buildah curl erlang emacs-nox fish fop git-delta \
+    httpie java-latest-openjdk-devel jq ncurses-devel nginx openssl-devel \
+    passwd ruby rubygems tmux unixODBC-devel util-linux which xsltproc
 
 dnf install --assumeyes --quiet 'dnf-command(config-manager)'
 dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
